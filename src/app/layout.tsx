@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Serif_Display, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import Navigation from "@/components/Navigation";
 
 const dmSerif = DM_Serif_Display({
   weight: "400",
@@ -28,7 +29,10 @@ export default function RootLayout({
       <body
         className={`${dmSerif.variable} ${jetbrainsMono.variable} antialiased`}
       >
-        {children}
+        <Navigation />
+        <main className="mx-auto max-w-4xl px-6 py-12">
+          {children}
+        </main>
       </body>
     </html>
   );
