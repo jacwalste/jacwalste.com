@@ -1,0 +1,35 @@
+export const title = "refactor: replaced recursion with recursion lol"
+export const date = "2025-10-20"
+
+Was working on a LangGraph agent that needed to think recursively. My first approach: recursion. My second approach: also recursion, but *better*.
+
+## The Problem
+
+Complex reasoning tasks need agents to break down problems, solve sub-problems, then synthesize results. Sounds perfect for recursion, right?
+
+Wrong. Well, not wrong, but also not quite right.
+
+## First Attempt
+
+```python
+def recursive_think(problem):
+    if is_simple(problem):
+        return solve(problem)
+    
+    sub_problems = break_down(problem)
+    results = [recursive_think(sp) for sp in sub_problems]
+    return synthesize(results)
+```
+
+This hit the recursion limit immediately. Also, no tracking of intermediate states. Bad times.
+
+## Second Attempt
+
+Used LangGraph's state management to track depth and intermediate results. Still recursive at the conceptual level, but implemented as a state machine.
+
+Much better. The graph handles the "call stack" and I get full observability through LangSmith.
+
+## Lesson Learned
+
+Recursion in agents is about *conceptual structure*, not *implementation pattern*. State machines > direct recursion when you need to track, observe, and potentially interrupt the process.
+
