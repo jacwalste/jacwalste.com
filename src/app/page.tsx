@@ -8,7 +8,7 @@ export default function Home() {
           hi, i&apos;m jacwalste
         </h1>
         <p className="text-xl text-amber-warm sm:text-2xl">
-          i build weird little brains out of code.
+          hand-coded cognition from a forest terminal
         </p>
       </div>
 
