@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# jacwalste.com
 
-## Getting Started
+A retro forest-cabin terminal aesthetic personal developer site for AI engineering projects and build logs.
 
-First, run the development server:
+## Overview
+
+This is my hacker/AI-engineer alias site — a complement to my main portfolio at [jackstepanek.com](https://jackstepanek.com). It focuses on engineering experiments, AI projects, and dev logs in a raw, terminal-like format.
+
+## Tech Stack
+
+- **Next.js 16** with App Router
+- **TailwindCSS v4** for styling
+- **MDX** for blog/changelog entries
+- **TypeScript** for type safety
+- Deployed on **Vercel**
+
+## Design Philosophy
+
+This site embraces a **retro 70's forest-cabin terminal** aesthetic:
+
+- Deep forest green color palette
+- Muted amber/cream text
+- DM Serif Display + JetBrains Mono fonts
+- CRT scan-line and flicker effects
+- Grainy analog texture
+- Terminal-style interactions
+
+## Features
+
+- **Home**: Rotating terminal-style project snippets
+- **Projects**: Grid of current and past AI/engineering projects
+- **Changelog**: Commit-style blog entries with MDX support
+- **About**: Personal bio with ASCII art
+- **Contact**: Interactive CLI-style terminal interface
+
+## Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit `http://localhost:3000`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Building
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Adding Changelog Entries
 
-To learn more about Next.js, take a look at the following resources:
+Create a new `.mdx` file in `src/content/changelog/`:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```mdx
+export const title = "feat: your commit message here"
+export const date = "2025-10-27"
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Your markdown content here...
+```
 
-## Deploy on Vercel
+## Commit Convention
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `feat:` for new features
+- `fix:` for bug fixes
+- `style:` for visual/polish tweaks
+- `content:` for text/blog updates
+- `chore:` for config/infra changes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Commit messages should be at least 15 words and describe the specific improvement.
+
+## License
+
+MIT
