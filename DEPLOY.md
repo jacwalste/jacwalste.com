@@ -2,13 +2,10 @@
 
 ## Quick Deploy to Vercel
 
-1. **Push to GitHub** (if you haven't already):
-   ```bash
-   git remote add origin https://github.com/yourusername/jacwalste.com.git
-   git push -u origin main
-   ```
+**Your code is already on GitHub!** 🎉  
+Repository: `git@github.com:jacwalste/jacwalste.com.git`
 
-2. **Deploy to Vercel**:
+Now just deploy to Vercel:
    - Visit [vercel.com](https://vercel.com)
    - Click "Import Project"
    - Select your GitHub repository
